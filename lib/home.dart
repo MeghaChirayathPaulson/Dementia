@@ -1,6 +1,6 @@
+import 'package:demens_care/Calendar/calendar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -34,29 +34,18 @@ class _DashboardState extends State<Dashboard> {
                 child: Column(
                   children: [
                     Row(
-                      children: [
-                        IconButton(
-                          icon: Image.asset('assets/de.jpeg'),
-                          color: Colors.white,
-                          iconSize: 15,
-                          onPressed: () {},
-                        ),
-                        const SizedBox(width: 10),
-                        const Text(
+                      children: const [
+                        SizedBox(width: 20),
+                        Text(
                           "Home Page",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 22,
+                            fontSize: 25,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const SizedBox(width: 130),
-                        IconButton(
-                          iconSize: 30.0,
-                          icon: const Icon(Icons.notifications_on_outlined),
-                          color: Colors.white,
-                          onPressed: () {},
-                        ),
+                        
+                       
                       ],
                     ),
                   ],
@@ -64,7 +53,7 @@ class _DashboardState extends State<Dashboard> {
               ),
               Container(
                 margin: const EdgeInsets.fromLTRB(15, 140, 15, 0),
-                height: MediaQuery.of(context).size.height * 0.23,
+                height: MediaQuery.of(context).size.height * 0.28,
                 width: MediaQuery.of(context).size.width * 100,
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -96,11 +85,33 @@ class _DashboardState extends State<Dashboard> {
                           ),
                         ),
                         Container(
-                          padding: const EdgeInsets.fromLTRB(15, 125, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(20, 125, 0, 0),
                           child: const Text(
-                            "STD - 12(B)",
+                            "Engineer",
                             style: TextStyle(
-                              color: Colors.grey,
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(10, 145, 0, 0),
+                          child: const Text(
+                            "99xxxxxxxx",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(20, 166, 0, 0),
+                          child: const Text(
+                            "Thrissur",
+                            style: TextStyle(
+                              color: Colors.black,
                               fontSize: 16,
                               fontWeight: FontWeight.w500,
                             ),
@@ -115,9 +126,13 @@ class _DashboardState extends State<Dashboard> {
                 children: [
                   Expanded(
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                         Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => const StartPage(),));
+
+                      },
                       child: Container(
-                        margin: const EdgeInsets.fromLTRB(20, 350, 20, 0),
+                        margin: const EdgeInsets.fromLTRB(20, 400, 20, 0),
                         height: MediaQuery.of(context).size.height * 0.17,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -137,7 +152,7 @@ class _DashboardState extends State<Dashboard> {
                                       radius: 29,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(50),
-                                        child: SvgPicture.asset("close.svg"),
+                                        child: SvgPicture.asset("assets/calender.svg"),
                                       ),
                                       backgroundColor: const Color(0xffdce0eb)),
                                 ),
@@ -163,7 +178,7 @@ class _DashboardState extends State<Dashboard> {
                     child: GestureDetector(
                       onTap: () {},
                       child: Container(
-                        margin: const EdgeInsets.fromLTRB(20, 350, 20, 0),
+                        margin: const EdgeInsets.fromLTRB(20, 400, 20, 0),
                         height: MediaQuery.of(context).size.height * 0.17,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -178,23 +193,20 @@ class _DashboardState extends State<Dashboard> {
                               children: [
                                 Container(
                                   padding:
-                                      const EdgeInsets.fromLTRB(20, 30, 0, 0),
+                                      const EdgeInsets.fromLTRB(50, 30, 0, 0),
                                   child: CircleAvatar(
                                       radius: 29,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(50),
-                                        child: Image.asset(
-                                          "assets/de.jpeg",
-                                          height: 45,
-                                        ),
+                                        child: SvgPicture.asset("assets/tracking.svg"),
                                       ),
                                       backgroundColor: const Color(0xffdce0eb)),
                                 ),
                                 Container(
                                   padding:
-                                      const EdgeInsets.fromLTRB(10, 95, 0, 0),
+                                      const EdgeInsets.fromLTRB(40, 95, 0, 0),
                                   child: const Text(
-                                    "Attendence",
+                                    "Treatment Tracking",
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 18,
@@ -216,7 +228,7 @@ class _DashboardState extends State<Dashboard> {
                     child: GestureDetector(
                       onTap: () {},
                       child: Container(
-                        margin: const EdgeInsets.fromLTRB(20, 510, 20, 0),
+                        margin: const EdgeInsets.fromLTRB(20, 560, 20, 0),
                         height: MediaQuery.of(context).size.height * 0.17,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -236,10 +248,7 @@ class _DashboardState extends State<Dashboard> {
                                       radius: 29,
                                       child: ClipRRect(
                                         borderRadius: BorderRadius.circular(50),
-                                        child: Image.asset(
-                                          "assets/de.jpeg",
-                                          height: 45,
-                                        ),
+                                        child: SvgPicture.asset("assets/puzzle (1).svg"),
                                       ),
                                       backgroundColor: const Color(0xffdce0eb)),
                                 ),
@@ -247,7 +256,7 @@ class _DashboardState extends State<Dashboard> {
                                   padding:
                                       const EdgeInsets.fromLTRB(0, 95, 0, 0),
                                   child: const Text(
-                                    "Home Work",
+                                    "Brain Gaming",
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 18,
@@ -265,7 +274,7 @@ class _DashboardState extends State<Dashboard> {
                     child: GestureDetector(
                       onTap: () {},
                       child: Container(
-                        margin: const EdgeInsets.fromLTRB(20, 510, 20, 0),
+                        margin: const EdgeInsets.fromLTRB(20, 560, 20, 0),
                         height: MediaQuery.of(context).size.height * 0.17,
                         decoration: BoxDecoration(
                             color: Colors.white,
@@ -280,15 +289,12 @@ class _DashboardState extends State<Dashboard> {
                               children: [
                                 Container(
                                   padding:
-                                      const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                                      const EdgeInsets.fromLTRB(30, 30, 0, 0),
                                   child: CircleAvatar(
                                     radius: 29,
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(50),
-                                      child: Image.asset(
-                                        "assets/de.jpeg",
-                                        height: 45,
-                                      ),
+                                     child: SvgPicture.asset("assets/album.svg"),
                                     ),
                                     backgroundColor: const Color(0xffdce0eb),
                                   ),
@@ -297,7 +303,7 @@ class _DashboardState extends State<Dashboard> {
                                   padding:
                                       const EdgeInsets.fromLTRB(5, 95, 0, 0),
                                   child: const Text(
-                                    "Result",
+                                    "Photo Album",
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 18,

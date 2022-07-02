@@ -12,6 +12,7 @@ class LoginDemo extends StatefulWidget {
 }
 
 class _LoginDemoState extends State<LoginDemo> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +27,6 @@ class _LoginDemoState extends State<LoginDemo> {
                     height: 1000,
                     decoration: const BoxDecoration(
                       color: Color(0xFFC1CDCE),
-                      //borderRadius: BorderRadius.all(Radius.circular(10.0)),
                       image: DecorationImage(
                         image: AssetImage('assets/de.jpeg'),
                         fit: BoxFit.cover,
