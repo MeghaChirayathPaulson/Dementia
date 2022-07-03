@@ -13,7 +13,7 @@ class TableRangeExample extends StatefulWidget {
 class _TableRangeExampleState extends State<TableRangeExample> {
   CalendarFormat _calendarFormat = CalendarFormat.month;
   RangeSelectionMode _rangeSelectionMode = RangeSelectionMode
-      .toggledOn; // Can be toggled on/off by longpressing a date
+      .toggledOn; 
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
   DateTime? _rangeStart;
@@ -24,7 +24,7 @@ class _TableRangeExampleState extends State<TableRangeExample> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF2A1758),
-        title: const Text('TableCalendar - Range'),
+        title: const Text('Calender'),
       ),
       body: TableCalendar(
         firstDay: kFirstDay,

@@ -18,7 +18,7 @@ class _StartPageState extends State<StartPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF2A1758),
-        title: const Text('TableCalendar Example'),
+        title: const Text('Calendar'),
       ),
       body: Center(
         child: Column(

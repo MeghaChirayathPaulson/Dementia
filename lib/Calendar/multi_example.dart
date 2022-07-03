@@ -61,7 +61,7 @@ class _TableMultiExampleState extends State<TableMultiExample> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF2A1758),
-        title: const Text('TableCalendar - Multi'),
+        title: const Text('Calender'),
       ),
       body: Column(
         children: [

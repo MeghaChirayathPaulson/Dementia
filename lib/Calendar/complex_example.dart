@@ -99,7 +99,7 @@ class _TableComplexExampleState extends State<TableComplexExample> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF2A1758),
-        title: const Text('TableCalendar - Complex'),
+        title: const Text('Calendar'),
       ),
       body: Column(
         children: [

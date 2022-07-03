@@ -85,7 +85,7 @@ class _TableEventsExampleState extends State<TableEventsExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('TableCalendar - Events'),
+        title: const Text('Calender'),
         backgroundColor: const Color(0xFF2A1758),
       ),
       body: Column(
